@@ -1,0 +1,47 @@
+.section-cta {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.section-cta__headline {
+  margin: $huge auto 0;
+}
+
+.section-cta__text {
+  margin: $normal auto 0;
+}
+
+.section-cta a.section-cta__button {
+  margin: 2.6875rem auto $huge;
+  padding: 0.5rem 2.5rem;
+  color: $buttonblue;
+  border: 0.125rem solid $buttonblue;
+  border-radius: 0.5rem;
+
+  &:hover {
+    color: white;
+    background: #34A4D1;
+  }
+}
+
+.section-cta.section-cta--black {
+  background-color: $backgroundblack;
+
+  .section-cta__text {
+    color: $white;
+  }
+  .section-cta__headline {
+    color: $white;
+  }
+}
+
+.section-cta__headline--narrow {
+  max-width: 800px;
+  text-align: center;
+}
+
+

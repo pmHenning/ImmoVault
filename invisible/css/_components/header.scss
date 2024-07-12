@@ -1,0 +1,66 @@
+header {
+  position: sticky;
+  top: 0;
+  background-color: $backgroundblack;
+  color: $white;
+  z-index: 1;
+}
+
+.header__wrapper {
+  display: flex;
+  height: 1.5625rem;
+  padding-top: $twentythree;
+  padding-bottom: $fifteen;
+  margin: 0 $small;
+  align-items: center;
+}
+
+.header__lang {
+  margin-right: auto;
+}
+
+.header-spacer {
+  height: 1.5625rem;
+}
+
+.header__logo {
+  font-size: 1.25rem;
+  letter-spacing: -0.0375rem;
+  font-weight: 600;
+  color: #3D3D3D;
+  @extend .montserrat;
+}
+
+.header__navi a {
+  padding: 0.25rem 0 0.25rem 1.75rem;
+}
+
+
+.header__lang {
+
+  .header__lang-en {
+    padding: 0.15rem 0.25rem;
+    border-right: $black 2px solid;
+    margin-left: 1rem;
+  }
+}
+
+.header--active {
+  font-weight: 700 !important;
+}
+
+@media only screen and (max-width: $phone){
+  .header {
+    &__wrapper {
+      justify-content: space-between;
+    }
+
+    &__lang {
+      margin-right: initial;
+    }
+
+    &__navi {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@import '../_layout/variables';
+
+.section-faq {
+  display: flex;
+  flex-direction: column;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    gap: $small;
+    padding: $twentythree 0;
+
+    &:not(:first-child) {
+      border-top: 1px solid #000;
+    }
+
+    &-question {
+      width: 30%;
+      min-width: 30%;
+      font-size: $twentyone;
+      font-weight: 600;
+    }
+
+    &-answer {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: $laptop) {
+  .section-faq {
+    &__item {
+      flex-direction: column;
+
+      &-question {
+        width: initial;
+      }
+    }
+  }
+}

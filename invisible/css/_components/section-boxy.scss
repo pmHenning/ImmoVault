@@ -1,0 +1,211 @@
+/** MANY BOX - split into to small ;-)
+*/
+.section-many-box {
+  display: block;
+}
+
+.section-many-box__left {
+  padding: $small $huge $huge 0;
+}
+
+.section-many-box__right {
+  gap: $small;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.section-many-box__box {
+  background-color: $lightblue;
+  padding: $small;
+
+  & h3 {
+    height: 3.125rem;
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .section-many-box__right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .section-many-box {
+    display: flex;
+  }
+  .section-many-box__left {
+    width: 50%;
+  }
+  .section-many-box__right {
+    width: 50%;
+  }
+}
+
+
+/** X BOXES
+*/
+
+section.section-x-box {
+  display: block;
+}
+
+.section-x-box__box-wrapper {
+  display: grid;
+  gap: $big;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.section-x-box__box--grey {
+  background-color: $lightblue;
+  padding: $small;
+  .h2-text {
+  }
+}
+
+.section-x-box__box--height-300 {
+  //height: 18.75rem;
+}
+
+.section-x-box__head {
+  width: 100%;
+  //text-align: center;
+}
+
+.section-x-box--grey .section-x-box__box {
+  background-color: $lightblue;
+  padding: $small;
+}
+
+.section-x-box--five-boxes {
+  gap: $min;
+}
+
+@media only screen and (min-width: $tablet) {
+  .section-x-box--five-boxes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .section-x-box--two-boxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: $desktop){
+  .section-x-box--five-boxes {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.section-two-boxes {
+  flex-wrap: wrap;
+}
+
+.section-two-boxes__head {
+  width: 100%;
+}
+
+.section-two-boxes__text-wrapper {
+  display: flex;
+}
+
+.section-two-boxes__text {
+  max-width: 40rem;
+  margin-right: $huge;
+}
+
+.section-two-boxes__box {
+  background-color: $lightblue;
+  padding: $small;
+  min-width: 21rem;
+
+  &:first-child {
+    margin-bottom: $min;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .section-two-boxes {
+    &__text-wrapper {
+      flex-direction: column;
+    }
+
+    &__text {
+      max-width: initial;
+      margin-right: initial;
+    }
+
+    &__box {
+      min-width: initial;
+    }
+  }
+}
+
+/** THREE BOXES
+*/
+
+.section-three-boxes {
+  flex-wrap: wrap;
+}
+
+.section-three-boxes__head {
+  width: 100%;
+  //text-align: center;
+}
+
+.section-three-boxes__text-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $min;
+}
+
+.section-three-boxes__box {
+  background-color: $lightblue;
+  padding: $small;
+  min-width: 27%;
+  flex: 1 1 0;
+}
+
+@media screen and (max-width: $tablet) {
+  .section-three-boxes {
+    &__text-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: $min;
+    }
+
+    &__box {
+      min-width: initial;
+    }
+  }
+}
+
+//@media screen and (min-width: $tablet) {
+//  .section-three-boxes__box > h3 {
+//    height: 6.5rem;
+//  }
+//}
+
+/** FOUR BOXES
+*/
+
+.section-four-boxes {
+  flex-wrap: wrap;
+  gap: $min;
+}
+
+.section-four-boxes__head {
+  width: 100%;
+}
+
+.section-four-boxes__box {
+  background-color: $lightblue;
+  padding: $normal;
+  min-width: 40%;
+  flex: 1 1 0;
+  > h3 {
+
+  }
+}
